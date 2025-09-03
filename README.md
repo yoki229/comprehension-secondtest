@@ -24,7 +24,7 @@ Laravel環境構築
 ## 使用技術
 
 - PHP 8.1
-- Laravel 8.1
+- Laravel 8.6
 - MySQL 8.0.26
 
 
