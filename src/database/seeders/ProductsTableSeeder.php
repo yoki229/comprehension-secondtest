@@ -22,7 +22,6 @@ class ProductsTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         //商品情報のダミーデータ10件
-        //あとで消すメモ　画像のbladeでの表示例　<img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
         $products = [
             ['name' => 'キウイ',
             'price' => 800,

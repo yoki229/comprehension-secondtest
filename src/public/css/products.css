@@ -1,0 +1,247 @@
+.main-content{
+    width: 100%;
+    height: 100%;
+}
+
+/* ヘッダー */
+
+.main-header {
+    width: 100%;
+    height: 100px;
+}
+
+.main-header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header__item {
+    display: inline-block;
+}
+
+.register-button {
+    background-color: #ffa929;
+    color: #4b4b4b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #ddd;
+}
+
+.register-button:hover {
+    background-color: #df9425;
+}
+
+.main-inner{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* サイド */
+
+.sidebar{
+    height: 100%;
+    width: 20%;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-textbox{
+    padding: 20px 10px;
+    margin: 0 20px;
+    border-radius: 25px;
+    border-color: #ccc;
+}
+
+.search-button{
+    background-color: #f5c800;
+    color: #4b4b4b;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #ddd;
+}
+
+.search-button:hover {
+    background-color: #ddb400;
+}
+
+/* 並び替えセレクトボックス風 */
+
+.sort-p{
+    color: #4b4b4b;
+    font-weight: bolder;
+    font-size: 23px;
+}
+
+.sort-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.sort-dropdown .placeholder {
+    width: 250px;
+    padding: 0;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    color: #888;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort-dropdown ul {
+    list-style: none;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 250px;
+    z-index: 10;
+}
+
+.sort-dropdown:hover ul {
+    display: block; /* ホバーでセレクトのように表示 */
+}
+
+.sort-dropdown ul li {
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.sort-dropdown ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.sort-dropdown ul li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.sort-dropdown__mark{
+    padding: 2px 5px;
+    margin: 0;
+    border: solid 1px #ccc;
+}
+
+/* 並び替えタグ */
+
+.sort-tag .active-sort {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.sort-tag .active-sort a {
+    margin-left: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* メイン */
+.content{
+    height: 100%;
+    width: 80%;
+}
+
+.content-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 374px;
+    width: 350px;
+    margin: 0 0 15px 15px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    text-decoration: none;
+}
+
+.card__img img {
+    width: 100%;
+    height: 281px;
+}
+
+.card__content{
+    width: 100%;
+    height: 69px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: #000;
+    font-size: 25px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.pagination ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+/* ページネーション */
+
+.pagination-item {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination {
+    padding: 0;
+    margin: 0;
+}
+
+.pagination li {
+    margin: 0 8px;
+}
+
+.pagination a,
+.pagination span {
+    display: block;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #f5c800;
+}
+
+.pagination .active span {
+    background-color: #f5c800 !important; 
+    color: #fff !important;
+    border-color: #f5c800 !important;
+}
+
+.pagination a:hover,
+.pagination a:hover,
+.pagination span:hover {
+    background-color: #f0f0f0;
+}
