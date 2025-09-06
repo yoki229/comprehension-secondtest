@@ -24,6 +24,10 @@ class SeasonsTableSeeder extends Seeder
         //季節情報(春・夏・秋・冬)のダミーデータ4件
         $seasons = ['春','夏','秋','冬'];
 
+        foreach ($seasons as $name) {
+            Season::create(['name' => $name]);
+        }
+
 
     }
 }

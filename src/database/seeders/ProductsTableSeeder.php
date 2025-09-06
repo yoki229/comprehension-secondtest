@@ -104,6 +104,19 @@ class ProductsTableSeeder extends Seeder
             ],
         ];
 
+        // データを挿入してリレーションを同期
+        foreach ($products as $p) {
+            $product = Product::create([
+                'name' => $p['name'],
+                'price' => $p['price'],
+                'image' => $p['image'],
+                'description' => $p['description'],
+            ]);
+
+        // 中間テーブルにリレーションを追加
+            $product->seasons()->sync($p['seasons']);
+        }
+
 
     }
 }
