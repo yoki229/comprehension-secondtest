@@ -104,7 +104,7 @@ class ProductsTableSeeder extends Seeder
             ],
         ];
 
-        // データを挿入してリレーションを同期
+        // データを挿入
         foreach ($products as $p) {
             $product = Product::create([
                 'name' => $p['name'],
