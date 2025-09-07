@@ -1,11 +1,13 @@
 .main-content {
-    width: 100%;
+    padding: 50px 20px;
+    margin: 0 auto;
+    width: 1512px;
 }
 
 /* ヘッダー */
 
 .main-header {
-    width: 100%;
+
     height: auto;
     padding-bottom: 10px;
 }
@@ -58,7 +60,8 @@
 .search-textbox {
     padding: 10px 10px;
     margin: 0;
-    border-radius: solid 30px #ccc;
+    border: solid 1px #ccc;
+    border-radius: 30px;
 }
 
 .search-button {
@@ -71,7 +74,7 @@
     font-weight: bolder;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 5px 5px 10px #ddd;
+    box-shadow: 5px 5px 10px #e4e4e4;
 }
 
 .search-button:hover {
@@ -183,7 +186,7 @@ a.card {
     width: 32%;
     height: auto;
     margin: 0 0 10px 10px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px #e4e4e4;
     display: block;
     text-decoration: none;
 }

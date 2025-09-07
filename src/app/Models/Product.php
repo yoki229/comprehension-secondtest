@@ -10,7 +10,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    //シーディングの為書き換え可能に
+    //書き換え可能に
     protected $fillable = ['name', 'price', 'image', 'description'];
 
     //リレーション
@@ -26,7 +26,7 @@ class Product extends Model
 
             // スペースで分割に対応
             $words = preg_split('/\s+/', $keyword);
-            
+
             // 部分一致検索
             foreach ($words as $word)
             {

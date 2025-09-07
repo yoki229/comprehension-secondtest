@@ -1,0 +1,160 @@
+
+.form-layouts {
+    margin: 0 auto;
+    padding: 70px 0;
+    width: 1000px;
+}
+
+/* 商品一覧 > 商品名 の段 */
+.cell__head {
+    width: 100%;
+    color: #5e5e5e;
+}
+
+/* ファイル選択の段 */
+.form-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.cell__file {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.cell__file img {
+    width: 100%;
+    height: auto;
+}
+
+.cell__file input {
+    margin: 20px 20px 20px 0;
+    color: #5e5e5e;
+}
+
+.cell__short-content {
+    width: 50%;
+}
+
+.cell-group {
+    width: 100%;
+}
+
+.cell__title-name {
+    margin: 0;
+    display: block;
+}
+
+.cell__title-price,
+.cell__title-seasons {
+    color: #5e5e5e;
+    margin-top: 30px;
+    display: block;
+}
+
+.cell__content-text input {
+    width: 100%;
+    height: 50px;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #e4e4e4;
+    color: #5e5e5e;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form__error {
+    color: red;
+    font-size: 14px;
+}
+
+.cell__content-checkbox {
+    display: inline-block;  /* チェックボックスを横並びに */
+    margin-right: 10px;
+}
+
+/* 商品説明の段 */
+.cell__long-content {
+    width: 100%;
+}
+
+.cell__title-description {
+    margin: 10px 0;
+}
+
+.cell__content-description textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px 8px;
+    border: 1px solid #e4e4e4;
+    color: #5e5e5e;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: none;
+
+}
+
+/* ボタンの段 */
+.cell__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cell__button a{
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #e0dfde;
+    color: #5e5e5e;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px #e4e4e4;
+    margin-right: 10px;
+}
+
+.cell__button a:hover{
+    text-decoration: none;
+    color: #5e5e5e;
+}
+
+.cell__button button{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #f5c800;
+    color: #5e5e5e;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px #e4e4e4;
+    margin-left: 10px;
+    padding-bottom: 4px;
+    padding-top: 0;
+}
+
+.delete-form {
+    text-align: right;
+}
+
+.delete-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    top: -40px;
+    right: 30px;
+}
+
+.delete-icon img {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
