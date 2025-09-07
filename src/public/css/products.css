@@ -1,19 +1,20 @@
-.main-content{
+.main-content {
     width: 100%;
-    height: 100%;
 }
 
 /* ヘッダー */
 
 .main-header {
     width: 100%;
-    height: 100px;
+    height: auto;
+    padding-bottom: 10px;
 }
 
 .main-header__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .main-header__item {
@@ -36,37 +37,36 @@
     background-color: #df9425;
 }
 
-.main-inner{
+.main-inner {
     display: flex;
     width: 100%;
-    height: 100%;
 }
 
 /* サイド */
 
-.sidebar{
+.sidebar {
     height: 100%;
     width: 20%;
+    margin: 0 10px;
 }
 
-.search{
+.search {
     display: flex;
     flex-direction: column;
 }
 
-.search-textbox{
-    padding: 20px 10px;
-    margin: 0 20px;
-    border-radius: 25px;
-    border-color: #ccc;
+.search-textbox {
+    padding: 10px 10px;
+    margin: 0;
+    border-radius: solid 30px #ccc;
 }
 
-.search-button{
+.search-button {
     background-color: #f5c800;
     color: #4b4b4b;
     border: none;
     padding: 10px 20px;
-    margin: 20px;
+    margin: 20px 0;
     font-size: 16px;
     font-weight: bolder;
     border-radius: 5px;
@@ -80,23 +80,24 @@
 
 /* 並び替えセレクトボックス風 */
 
-.sort-p{
+.sort-p {
     color: #4b4b4b;
     font-weight: bolder;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 .sort-dropdown {
     display: inline-block;
     position: relative;
+    width: 100%;
 }
 
 .sort-dropdown .placeholder {
-    width: 250px;
     padding: 0;
-    background-color: #f8f8f8;
+    margin: 0;
+    background-color: #fff;
     border: 1px solid #ccc;
-    color: #888;
+    color: #4b4b4b;
     cursor: default;
     display: flex;
     justify-content: space-between;
@@ -113,7 +114,7 @@
     display: none;
     border: 1px solid #ccc;
     background-color: #fff;
-    width: 250px;
+    width: 100%;
     z-index: 10;
 }
 
@@ -136,7 +137,7 @@
     display: block;
 }
 
-.sort-dropdown__mark{
+.sort-dropdown__mark {
     padding: 2px 5px;
     margin: 0;
     border: solid 1px #ccc;
@@ -146,54 +147,75 @@
 
 .sort-tag .active-sort {
     display: inline-block;
-    margin-left: 10px;
-    font-weight: normal;
-    color: #fff;
+    vertical-align: middle;
+    margin-top: 20px;
+    padding: 10px;
+    color: #4b4b4b;
+    font-size: 12px;
+    border: solid 1px #f5c800;
+    border-radius: 30px;
 }
 
 .sort-tag .active-sort a {
-    margin-left: 5px;
-    color: #fff;
+    margin-left: 10px;
+    padding: 0 4px 2px 4px;
+    color: #f5c800;
     text-decoration: none;
-    font-weight: normal;
+    font-weight: bolder;
+    border: solid 1px #f5c800;
+    border-radius: 50px;
 }
 
 /* メイン */
-.content{
+.content {
     height: 100%;
     width: 80%;
 }
 
-.content-list{
+.content-list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 
-.card{
-    width: 374px;
-    width: 350px;
-    margin: 0 0 15px 15px;
+a.card {
+    width: 32%;
+    height: auto;
+    margin: 0 0 10px 10px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
     display: block;
     text-decoration: none;
 }
 
+a.card:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
 .card__img img {
     width: 100%;
-    height: 281px;
+    height: 100%;
+    object-fit: cover;
 }
 
-.card__content{
+.card__content {
     width: 100%;
-    height: 69px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+    padding: 10px;
     color: #000;
-    font-size: 25px;
 }
 
-.pagination{
+.card__content div {
+    font-size: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pagination {
     display: flex;
     justify-content: center;
     margin: 20px;

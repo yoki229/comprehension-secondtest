@@ -19,4 +19,20 @@ class Product extends Model
         return $this->belongsToMany(Season::class, 'product_season', 'product_id', 'season_id');
     }
 
+    //テキストボックスの検索
+    public function scopeKeywordSearch($query, $keyword)
+    {
+        if (!empty($keyword)) {
+
+            // スペースで分割に対応
+            $words = preg_split('/\s+/', $keyword);
+            
+            // 部分一致検索
+            foreach ($words as $word)
+            {
+                $query->where('name', 'like', '%' . $keyword . '%');
+            }
+        }
+    }
+
 }

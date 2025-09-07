@@ -5,5 +5,6 @@ use App\Http\Controllers\ProductsController;
 
 
 Route::get('/products',[ProductsController::class,'index']);
-Route::get('/products/register',[ProductsController::class,'register']);
 Route::get('/products/search',[ProductsController::class,'search']);
+Route::get('/products/{productId}',[ProductsController::class,'detail']);
+Route::get('/products/register',[ProductsController::class,'register']);

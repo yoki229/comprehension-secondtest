@@ -9,10 +9,16 @@
     <!-- ヘッダー -->
     <div class="main-header">
         <div class="main-header__content">
-            <h1 class="main-header__item">商品一覧</h1>
-            <form action="/products/register" class="main-header__item">
+            <h2 class="main-header__item">
+                @if(request('keyword'))
+                    "{{ request('keyword') }}"の商品一覧
+                @else
+                    商品一覧
+                @endif
+            </h2>
+            <a href="/products/register" class="main-header__item">
                 <button class="register-button">+商品を追加</button>
-            </form>
+            </a>
         </div>
     </div>
 
@@ -40,9 +46,9 @@
             <!-- 選択中のソートを表示 -->
             <div class="sort-tag">
                 @if(request('sort') == 'highest')
-                <span class="active-sort">高い順に表示 <a href="/products/search?keyword={{ request('keyword') }}">×</a></span>
+                <span class="active-sort">高い順に表示 <a href="/products/search?keyword={{ $keyword }}">×</a></span>
                 @elseif(request('sort') == 'lowest')
-                <span class="active-sort">低い順に表示 <a href="/products/search?keyword={{ request('keyword') }}">×</a></span>
+                <span class="active-sort">低い順に表示 <a href="/products/search?keyword={{ $keyword }}">×</a></span>
                 @endif
             </div>
         </div>
@@ -52,7 +58,7 @@
             <div class="content-list">
 
                 @foreach($products as $product)
-                <a href="route('products.show', $product->id)" class="card">
+                <a href="/products/{{ $product->id }}" class="card">
                     <div class="card__img">
                         <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
                     </div>
