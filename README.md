@@ -30,7 +30,7 @@ Laravel環境構築
 
 ## ER図
 
-![ER図](readme-assets/table.drawio.pn)
+![ER図](readme-assets/table.drawio.png)
 
 
 ## URL
