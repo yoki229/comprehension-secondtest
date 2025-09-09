@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Product;
 use App\Models\Season;
 use App\Http\Requests\RegisterRequest;
@@ -60,12 +61,18 @@ class ProductsController extends Controller
         //画像の保存
         if ($request->hasFile('image'))
         {
+            // 古い画像をストレージから削除
+                if($product->name) {
+                    Storage::disk('public')->delete(str_replace('storage/', '', $product->image));
+                }
+            // 新しい画像を保存
             $path = $request->file('image')->store('public/images');
-            $request->merge(['image' => str_replace('public/', 'storage/', $path)]);
+            $product->image = str_replace('public/', 'storage/', $path);
         }
 
         //通常カラムの更新
-        $product->update($request->only(['name', 'price', 'image', 'description']));
+        $product->update($request->only(['name', 'price', 'description']));
+
         //リレーションカラムの更新
         if ($request->has('seasons'))
         {

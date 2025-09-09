@@ -39,7 +39,7 @@
     height: auto;
 }
 
-/* 商品名・値段　テキストボックス */
+/* 商品名・値段 テキストボックス */
 
 .form__content-text input {
     width: 100%;
@@ -59,6 +59,8 @@
 .form__file img {
     width: 100%;
     height: auto;
+    display: none;
+    margin-top: 25px;
 }
 
 .form__file input {

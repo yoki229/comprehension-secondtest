@@ -64,10 +64,10 @@
                 <span class="form__title--red">必須</span>
             </div>
             <div class="form__file">
-                @if(!empty($product->image))
-                    <img src="{{ asset($product->image) }}" alt="商品画像">
-                @endif
-                <input type="file" name="image">
+                <!-- プレビュー画像（初期は非表示 -->
+                <img src="#" id="preview">
+                <!-- ファイル選択 -->
+                <input type="file" name="image" id="image" class="form__file-update" accept="image/*">
             </div>
             <div class="form__error">
                 @if ($errors->has('image'))
@@ -138,5 +138,22 @@
         </div>
     </form>
 </div>
+
+<!-- プレビュー表示用JavaScript -->
+<!-- JavaScriptなしではプレビューはどうにもならなそうだったので入れてみます。 -->
+<script>
+document.getElementById('image').addEventListener('change', function(event){
+    const file = event.target.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(e){
+            const preview = document.getElementById('preview');
+            preview.src = e.target.result;
+            preview.style.display = 'block'; // プレビューを表示
+        }
+        reader.readAsDataURL(file);
+    }
+});
+</script>
 
 @endsection

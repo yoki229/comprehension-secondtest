@@ -20,8 +20,11 @@
         <!-- ファイル選択の段 -->
         <div class="form-flex">
             <div class="form__file">
-                <img src="{{ asset($product->image) }}" >
-                <input type="file" name="image">
+                <!-- プレビュー -->
+                <img src="{{ asset($product->image) }}" id="preview">
+                <!-- 画像の選択 -->
+                <input type="file" name="image" id="image" class="form__file-new" accept="image/*">
+
                 <div class="form__error">
                     @if ($errors->has('image'))
                         <ul>
@@ -140,5 +143,21 @@
     </button>
     </form>
 </div>
+
+
+<!-- プレビュー切り替え用JavaScript -->
+<!-- JavaScriptなしではプレビューはどうにもならなそうだったので入れてみます。 -->
+<script>
+document.getElementById('image').addEventListener('change', function(event){
+    const file = event.target.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(e){
+            document.getElementById('preview').src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+});
+</script>
 
 @endsection

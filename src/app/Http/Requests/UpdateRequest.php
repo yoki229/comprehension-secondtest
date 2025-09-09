@@ -21,7 +21,7 @@ class UpdateRequest extends FormRequest
             'price' => 'required|integer|min:0|max:10000',
             'seasons' => 'required|array',
             'description' => 'required|max:120',
-            'image' => 'nullable|image|mimes:jpeg,png',
+            'image' => 'nullable|mimes:jpeg,png',
         ];
     }
 
@@ -38,7 +38,6 @@ class UpdateRequest extends FormRequest
             'description.max' => '120文字以内で入力してください',
             // 'image.required' => '商品画像を登録してください',　　更新のときはここはいらないと判断しました。エラーが出る為省きます。
             'image.mimes' => '「.png」または「.jpeg」形式でアップロードしてください',
-            'image.image' => '画像ファイルをアップロードしてください',
         ];
     }
 
