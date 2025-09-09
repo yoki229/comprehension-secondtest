@@ -196,6 +196,11 @@ a.card:hover {
     opacity: 0.8;
 }
 
+.card__img {
+    width: 100%;
+    height: 80%;
+}
+
 .card__img img {
     width: 100%;
     height: 100%;
@@ -204,7 +209,7 @@ a.card:hover {
 
 .card__content {
     width: 100%;
-    height: 40px;
+    height: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -213,7 +218,7 @@ a.card:hover {
 }
 
 .card__content div {
-    font-size: 100%;
+    font-size: 24px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -232,7 +237,7 @@ a.card:hover {
     gap: 5px;
 }
 
-/* ページネーション */
+/* ページネーションデザイン */
 
 .pagination-item {
     display: flex;
