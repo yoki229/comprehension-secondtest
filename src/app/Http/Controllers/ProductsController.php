@@ -78,7 +78,25 @@ class ProductsController extends Controller
     //商品登録ページ
     public function register()
     {
-		return view('/register');
+        $seasons = Season::all();
+        return view('/register', compact('seasons'));
+	}
+
+    //商品登録
+    public function store(RegisterRequest $request)
+    {
+        $product = new Product();
+        $product->name = $request->input('name');
+        $product->price = $request->input('price');
+        $product->description = $request->input('description');
+
+        // 画像の保存
+        $path = $request->file('image')->store('public/images');
+        $product->image = str_replace('public/', 'storage/', $path);
+
+        $product->save();
+
+		return redirect('/products');
 	}
 
     //商品削除
